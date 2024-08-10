@@ -1,5 +1,5 @@
 export class Dice {
-  constructor(readonly faces: number = 6) {}
+  constructor(readonly faces: number) {}
 
   roll = () => Math.floor(Math.random() * this.faces) + 1
 

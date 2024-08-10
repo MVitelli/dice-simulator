@@ -25,7 +25,7 @@ export default class Dice extends Command {
     const {flags} = await this.parse(Dice)
 
     if (!flags.interactive) {
-      const diceRoller = new DiceRoller(Number(flags.faces))
+      const diceRoller = new DiceRoller(Number(flags.faces || 6))
       this.log(`Output: ${diceRoller.roll()}`)
     } else {
       const dices: DiceRoller[] = []
